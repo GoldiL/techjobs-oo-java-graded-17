@@ -66,6 +66,26 @@ public class Job {
         this.positionType = positionType;
     }
 
+    @Override
+    public String toString() {
+        String newLine = System.lineSeparator();
+
+        this.name=(Objects.equals(name, ""))?"Data not available":name;
+        String emp=(employer.getValue() == "")?"Data not available":employer.getValue();
+        employer.setValue(emp);
+        String loc=(location.getValue() == "")?"Data not available":location.getValue();
+        location.setValue(loc);
+        String pos=(positionType.getValue() == "")?"Data not available":positionType.getValue();
+        positionType.setValue(pos);
+
+        return newLine + "ID: " + id +
+                newLine + "Name: " + name +
+                newLine + "Employer: " + employer +
+                newLine + "Location: " + location +
+                newLine + "Position Type: " + positionType.getValue()  +
+                newLine + "Core Competency: " +coreCompetency + newLine;
+    }
+
     public CoreCompetency getCoreCompetency() {
         return coreCompetency;
     }
