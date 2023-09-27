@@ -68,7 +68,7 @@ public class Job {
 
     @Override
     public String toString() {
-        String newLine = System.lineSeparator();
+        String newLine = "\n";
 
         this.name=(Objects.equals(name, ""))?"Data not available":name;
         String emp=(employer.getValue() == "")?"Data not available":employer.getValue();

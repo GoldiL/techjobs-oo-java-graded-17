@@ -48,50 +48,52 @@ public class JobTest {
     public void testToStringContainsCorrectLabelsAndData(){
 
         Job job1 = new Job("Product tester", new Employer("ACME"), new Location("Desert"), new PositionType("Quality control"), new CoreCompetency("Persistence"));
-        String expectedResult="\r\n" +
-                "ID: "+ job1.getId()+"\r\n" +
-                "Name: Product tester\r\n" +
-                "Employer: ACME\r\n" +
-                "Location: Desert\r\n" +
-                "Position Type: Quality control\r\n" +
-                "Core Competency: Persistence\r\n";
+        String expectedResult="\n" +
+                "ID: "+ job1.getId()+"\n" +
+                "Name: Product tester\n" +
+                "Employer: ACME\n" +
+                "Location: Desert\n" +
+                "Position Type: Quality control\n" +
+                "Core Competency: Persistence\n";
 
         String actualresult=job1.toString();
         assertEquals(expectedResult,actualresult);
-        
+
     }
 
     @Test
     public void testToStringStartsAndEndsWithNewLine (){
         Job job1 = new Job("Product tester", new Employer("ACME"), new Location("Desert"), new PositionType("Quality control"), new CoreCompetency("Persistence"));;
-        int lastIndex = (job1.toString().length() -2);
+        //int lastIndex = (job1.toString().length() -2);
+        int lastIndex = (job1.toString().length() -1);
 
-        assertEquals(System.lineSeparator(),job1.toString().substring(0,2));
-        assertEquals(System.lineSeparator(),job1.toString().substring(lastIndex));
+        //assertEquals(System.lineSeparator(),job1.toString().substring(0,2));
+        assertEquals('\n',job1.toString().charAt(0));
+        assertEquals('\n',job1.toString().charAt(lastIndex));
     }
 
     @Test
     public void testToStringHandlesEmptyField(){
         Job job2 = new Job("", new Employer("Launchcode"), new Location("Saint Louis"), new PositionType("Web - Full Stack"), new CoreCompetency("Javascript"));
-        String actualresult1="\r\n" +
-                "ID: "+job2.getId()+"\r\n" +
-                "Name: Data not available\r\n" +
-                "Employer: Launchcode\r\n" +
-                "Location: Saint Louis\r\n" +
-                "Position Type: Web - Full Stack\r\n" +
-                "Core Competency: Javascript\r\n";
+        String actualresult1="\n" +
+                "ID: "+job2.getId()+"\n" +
+                "Name: Data not available\n" +
+                "Employer: Launchcode\n" +
+                "Location: Saint Louis\n" +
+                "Position Type: Web - Full Stack\n" +
+                "Core Competency: Javascript\n";
 
         String expectedResult1=job2.toString();
         assertEquals(actualresult1,expectedResult1);
 
         Job job3 = new Job("Full Stack Developer", new Employer(""), new Location("Saint Louis"), new PositionType("Web - Full Stack"), new CoreCompetency("Javascript"));
-        String actualresult2="\r\n" +
-                "ID: " +job3.getId()+"\r\n"+
-                "Name: Full Stack Developer\r\n" +
-                "Employer: Data not available\r\n" +
-                "Location: Saint Louis\r\n" +
-                "Position Type: Web - Full Stack\r\n" +
-                "Core Competency: Javascript\r\n";
+        String actualresult2="\n" +
+                "ID: " +job3.getId()+"\n"+
+                "Name: Full Stack Developer\n" +
+                "Employer: Data not available\n" +
+                "Location: Saint Louis\n" +
+                "Position Type: Web - Full Stack\n" +
+                "Core Competency: Javascript\n";
 
         String expectedResult2=job3.toString();
         assertEquals(actualresult2,expectedResult2);
