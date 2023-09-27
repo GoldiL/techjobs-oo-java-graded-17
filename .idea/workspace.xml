@@ -5,13 +5,6 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="59ff47a6-ece6-4e2e-b777-6247aa1f282e" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/launchcode/techjobs/oo/JobField.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/launchcode/techjobs/oo/Employer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/launchcode/techjobs/oo/Employer.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/launchcode/techjobs/oo/Location.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/launchcode/techjobs/oo/Location.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/launchcode/techjobs/oo/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/launchcode/techjobs/oo/Main.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/launchcode/techjobs/oo/PositionType.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/launchcode/techjobs/oo/PositionType.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/org/launchcode/techjobs/oo/JobTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/org/launchcode/techjobs/oo/JobTest.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/java/org/launchcode/techjobs/oo/TestTaskFive.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/org/launchcode/techjobs/oo/TestTaskFive.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -72,7 +65,7 @@
     &quot;settings.editor.selected.configurable&quot;: &quot;reference.settingsdialog.IDE.editor.colors.Markdown&quot;
   }
 }</component>
-  <component name="RunManager" selected="Application.Main">
+  <component name="RunManager" selected="Gradle.Tests in 'org.launchcode.techjobs.oo'">
     <configuration name="Main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="org.launchcode.techjobs.oo.Main" />
       <module name="techjobs-oo-java17-graded.main" />
@@ -198,8 +191,8 @@
     </list>
     <recent_temporary>
       <list>
-        <item itemvalue="Application.Main" />
         <item itemvalue="Gradle.Tests in 'org.launchcode.techjobs.oo'" />
+        <item itemvalue="Application.Main" />
         <item itemvalue="Gradle.JobTest" />
         <item itemvalue="Gradle.JobTest.testToStringHandlesEmptyField" />
         <item itemvalue="Gradle.JobTest.testToStringContainsCorrectLabelsAndData" />
@@ -236,14 +229,22 @@
       <option name="project" value="LOCAL" />
       <updated>1695610415505</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="updating task5 in Job class">
+      <created>1695837492692</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1695837492692</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="completion of task2 and task3" />
     <MESSAGE value="updating task3 in Job class" />
     <MESSAGE value="updating task4 in Job class" />
-    <option name="LAST_COMMIT_MESSAGE" value="updating task4 in Job class" />
+    <MESSAGE value="updating task5 in Job class" />
+    <option name="LAST_COMMIT_MESSAGE" value="updating task5 in Job class" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>

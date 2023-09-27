@@ -58,8 +58,7 @@ public class JobTest {
 
         String actualresult=job1.toString();
         assertEquals(expectedResult,actualresult);
-
-
+        
     }
 
     @Test
