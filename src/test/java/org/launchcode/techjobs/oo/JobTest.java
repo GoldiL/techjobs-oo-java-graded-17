@@ -45,6 +45,24 @@ public class JobTest {
     }
 
     @Test
+    public void testToStringContainsCorrectLabelsAndData(){
+
+        Job job1 = new Job("Product tester", new Employer("ACME"), new Location("Desert"), new PositionType("Quality control"), new CoreCompetency("Persistence"));
+        String expectedResult="\r\n" +
+                "ID: "+ job1.getId()+"\r\n" +
+                "Name: Product tester\r\n" +
+                "Employer: ACME\r\n" +
+                "Location: Desert\r\n" +
+                "Position Type: Quality control\r\n" +
+                "Core Competency: Persistence\r\n";
+
+        String actualresult=job1.toString();
+        assertEquals(expectedResult,actualresult);
+
+
+    }
+
+    @Test
     public void testToStringStartsAndEndsWithNewLine (){
         Job job1 = new Job("Product tester", new Employer("ACME"), new Location("Desert"), new PositionType("Quality control"), new CoreCompetency("Persistence"));;
         int lastIndex = (job1.toString().length() -2);
@@ -57,9 +75,9 @@ public class JobTest {
     public void testToStringHandlesEmptyField(){
         Job job2 = new Job("", new Employer("Launchcode"), new Location("Saint Louis"), new PositionType("Web - Full Stack"), new CoreCompetency("Javascript"));
         String actualresult1="\r\n" +
-                "ID: 1\r\n" +
+                "ID: "+job2.getId()+"\r\n" +
                 "Name: Data not available\r\n" +
-                "Employer: Infosys\r\n" +
+                "Employer: Launchcode\r\n" +
                 "Location: Saint Louis\r\n" +
                 "Position Type: Web - Full Stack\r\n" +
                 "Core Competency: Javascript\r\n";
@@ -69,12 +87,12 @@ public class JobTest {
 
         Job job3 = new Job("Full Stack Developer", new Employer(""), new Location("Saint Louis"), new PositionType("Web - Full Stack"), new CoreCompetency("Javascript"));
         String actualresult2="\r\n" +
-                "ID: 2\r\n" +
+                "ID: " +job3.getId()+"\r\n"+
                 "Name: Full Stack Developer\r\n" +
                 "Employer: Data not available\r\n" +
                 "Location: Saint Louis\r\n" +
                 "Position Type: Web - Full Stack\r\n" +
-                "Core Competency: Angular\r\n";
+                "Core Competency: Javascript\r\n";
 
         String expectedResult2=job3.toString();
         assertEquals(actualresult2,expectedResult2);
