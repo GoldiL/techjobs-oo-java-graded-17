@@ -2,6 +2,8 @@ package org.launchcode.techjobs.oo;
 
 import java.util.Objects;
 
+import static java.lang.System.lineSeparator;
+
 public class Job {
 
     private int id;
@@ -68,7 +70,7 @@ public class Job {
 
     @Override
     public String toString() {
-        String newLine = "\n";
+        String newLine = lineSeparator();
 
         this.name=(Objects.equals(name, ""))?"Data not available":name;
         String emp=(employer.getValue() == "")?"Data not available":employer.getValue();
@@ -78,7 +80,7 @@ public class Job {
         String pos=(positionType.getValue() == "")?"Data not available":positionType.getValue();
         positionType.setValue(pos);
 
-        return newLine + "ID: " + id +
+        return  newLine + "ID: " + id +
                 newLine + "Name: " + name +
                 newLine + "Employer: " + employer +
                 newLine + "Location: " + location +
@@ -98,12 +100,12 @@ public class Job {
     public boolean equals(Object o) {
         if (this == o) return true;
         if (!(o instanceof Job job)) return false;
-        return getId() == job.getId() && Objects.equals(getName(), job.getName()) && Objects.equals(getEmployer(), job.getEmployer()) && Objects.equals(getLocation(), job.getLocation()) && Objects.equals(getPositionType(), job.getPositionType()) && Objects.equals(getCoreCompetency(), job.getCoreCompetency());
+        return getId() == job.getId() ;
     }
 
     @Override
     public int hashCode() {
-        return Objects.hash(getId(), getName(), getEmployer(), getLocation(), getPositionType(), getCoreCompetency());
+        return Objects.hash(getId());
     }
 
 }

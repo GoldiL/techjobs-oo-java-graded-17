@@ -36,8 +36,8 @@ public class TestTaskFive extends AbstractTest {
     @Test
     public void testToStringStartsAndEndsWithNewLine() throws ClassNotFoundException, NoSuchMethodException, InvocationTargetException, InstantiationException, IllegalAccessException {
         Job job = createJob("Web Developer", "LaunchCode", "StL", "Back-end developer", "Java");
-        String firstChar = String.valueOf(job.toString().charAt(0));
-        String lastChar = String.valueOf(job.toString().charAt(job.toString().length()-1));
+        String firstChar = String.valueOf(job.toString().substring(0,2));
+        String lastChar = String.valueOf(job.toString().substring(job.toString().length()-2));
         assertEquals(firstChar, lineSeparator());
         assertEquals(lastChar, lineSeparator());
     }

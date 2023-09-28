@@ -19,6 +19,14 @@ public class Main {
             System.out.println(job);
         }
         System.out.println(job1.toString());
+
+        Job job4 = new Job("Web Developer",  new Employer("LaunchCode"),new Location("StL"), new PositionType("Back-end developer"), new CoreCompetency("Java"));
+        String firstChar = String.valueOf(job4.toString().charAt(0));
+        String lastChar = String.valueOf(job4.toString().charAt(job4.toString().length()-1));
+        System.out.println("-----------"+job4.toString());
+        System.out.println("#$###########"+firstChar);
+        System.out.println("!!!!!!!!!!!!!!!"+lastChar);
+
     }
 
 }
