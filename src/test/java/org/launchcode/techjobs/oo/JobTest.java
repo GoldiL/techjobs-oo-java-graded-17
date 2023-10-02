@@ -46,6 +46,7 @@ public class JobTest {
         Job job1 = new Job("Product tester", new Employer("ACME"), new Location("Desert"), new PositionType("Quality control"), new CoreCompetency("Persistence"));
         Job job2 = new Job("Full Stack Developer", new Employer("Launchcode"), new Location("Saint Louis"), new PositionType("Web - Full Stack"), new CoreCompetency("Javascript"));
         Assert.assertFalse(job1.equals(job2));
+
     }
 
 
