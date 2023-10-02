@@ -54,6 +54,7 @@ public class JobTest {
     public void testToStringStartsAndEndsWithNewLine(){
         Job job1 = new Job("Product tester", new Employer("ACME"), new Location("Desert"), new PositionType("Quality control"), new CoreCompetency("Persistence"));;
         int lastIndex = (job1.toString().length() -2);
+        
         assertEquals(lineSeparator(),job1.toString().substring(0,2));
         assertEquals(lineSeparator(),job1.toString().substring(lastIndex));
     }
